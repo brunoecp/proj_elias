@@ -19,29 +19,29 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
-@EqualsAndHashCode
-@Entity
-@Table(name = "proprietario")
-public class Proprietario {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long codigo;
-	@Column(length = 60, nullable = false)
-	private String nome;
-	@Column(length = 20, nullable = false)
-	private String telefone;
-	@Column(length = 255)
-	private String email;
-	
-	// @OneToOne(mappedBy = "proprietario")
-	// private Veiculo veiculo;
-	
-	@OneToMany(mappedBy = "proprietario")
-	private List<Veiculo> veiculos;
-
-}
+//@Getter @Setter
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@ToString
+//@EqualsAndHashCode
+//@Entity
+//@Table(name = "proprietario")
+//public class Proprietario {
+//
+//	@Id
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	private Long codigo;
+//	@Column(length = 60, nullable = false)
+//	private String nome;
+//	@Column(length = 20, nullable = false)
+//	private String telefone;
+//	@Column(length = 255)
+//	private String email;
+//
+//	// @OneToOne(mappedBy = "proprietario")
+//	// private Veiculo veiculo;
+//
+//	@OneToMany(mappedBy = "proprietario")
+//	private List<Veiculo> veiculos;
+//
+//}

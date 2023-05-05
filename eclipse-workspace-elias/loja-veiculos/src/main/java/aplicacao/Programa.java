@@ -10,8 +10,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Persistence;
 
 import dominio.Acessorio;
-import dominio.Proprietario;
-import dominio.ProprietarioEmbedded;
+//import dominio.Proprietario;
+//import dominio.ProprietarioEmbedded;
 import dominio.TipoCombustivel;
 import dominio.Veiculo;
 
@@ -117,7 +117,7 @@ public class Programa {
 		em.persist(veiculo);
 		*/
 
-		///*
+		/*
 		// parte vi - @ManyToOne
 		Proprietario proprietario = new Proprietario();
 		proprietario.setNome("Jo�o das Couves");
@@ -149,9 +149,9 @@ public class Programa {
 		veiculo2.setProprietario(proprietario);
 		
 		em.persist(veiculo2);		
-		//*/	
+		*/
 		
-		/*
+		///*
 		// parte vii - @ManyToMany
 		
 		// instancia acess�rios
@@ -198,7 +198,7 @@ public class Programa {
 		// persiste ve�culos
 		em.persist(veiculo1);
 		em.persist(veiculo2);	
-		*/			
+		//*/
 		
 		em.getTransaction().commit();
 		//*/

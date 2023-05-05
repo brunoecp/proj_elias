@@ -6,28 +6,12 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.Lob;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
-@Getter @Setter
+@Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
@@ -77,12 +61,12 @@ public class Veiculo {
 	//@Embedded
 	//private ProprietarioEmbedded proprietario;
 	
-	///*
+	/*
 	// O relacionamento one-to-one aceita refer�ncias nulas, por padr�o. Podemos obrigar a atribui��o de propriet�rio durante a persist�ncia de Veiculo, incluindo o atributo optional com valor false na anota��o @OneToOne.
 	@OneToOne //(optional = false)
 	//@JoinColumn(name = "cod_proprietario")
 	private Proprietario proprietario;
-	//*/
+	*/
 	
 	/*
 	@ManyToOne
@@ -90,15 +74,15 @@ public class Veiculo {
 	private Proprietario proprietario;
 	*/
 	
-	/*
+	///*
 	@ManyToMany
 	// parte ii - @JoinTable
 	@JoinTable(name = "veiculo_acessorio",
 	joinColumns = @JoinColumn(name = "veiculo_codigo"),
 	inverseJoinColumns = @JoinColumn(name = "acessorio_codigo"))
-	*/
+	//*/
 	// parte i
-	//private Set<Acessorio> acessorios = new HashSet<>(); // Definimos aqui um conjunto para que um ve�culo n�o tenha um acess�rio repetido
+	private Set<Acessorio> acessorios = new HashSet<>(); // Definimos aqui um conjunto para que um ve�culo n�o tenha um acess�rio repetido
 
 	/*
 	As propriedades de uma entidade s�o automaticamente mapeadas se n�o especificarmos nenhuma anota��o.

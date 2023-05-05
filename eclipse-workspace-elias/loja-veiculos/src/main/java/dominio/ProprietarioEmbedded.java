@@ -12,19 +12,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
-@EqualsAndHashCode
-@Embeddable
-public class ProprietarioEmbedded {
-
-	@Column(name = "nome_proprietario", nullable = false)
-	private String nome;
-	@Column(name = "telefone_proprietario", nullable = false)
-	private String telefone;
-	@Column(name = "email_proprietario")
-	private String email;
-
-}
+//@Getter @Setter
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@ToString
+//@EqualsAndHashCode
+//@Embeddable
+//public class ProprietarioEmbedded {
+//
+//	@Column(name = "nome_proprietario", nullable = false)
+//	private String nome;
+//	@Column(name = "telefone_proprietario", nullable = false)
+//	private String telefone;
+//	@Column(name = "email_proprietario")
+//	private String email;
+//
+//}
