@@ -35,7 +35,7 @@ public class ListandoTelefones {
 		System.out.println("Proprietario: " + proprietario.getNome());
 
 		for(Telefone telefone : proprietario.getTelefones()){
-			System.out.println("Telefone: "  + telefone);
+			System.out.println("Prefixo: "  + telefone.getPrefixo() + " Numero: " + telefone.getNumero() + " Ramal: " + telefone.getRamal());
 		}
 
 		// em.getTransaction().commit();
