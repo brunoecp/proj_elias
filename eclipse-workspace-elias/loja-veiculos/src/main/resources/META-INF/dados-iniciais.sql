@@ -95,3 +95,9 @@ values (1, 3);
 insert into veiculo_acessorio (veiculo_codigo, acessorio_codigo)
 values (1, 4);
 commit;
+
+insert into proprietario(nome,telefone) values('fernando Martins', 333);
+insert into proprietario(nome,telefone) values('Isabela Santos', 222);
+insert into proprietario(nome, telefone) values('Ulisses Silva', 111);
+
+commit;

@@ -151,7 +151,7 @@ public class Programa {
 		em.persist(veiculo2);		
 		*/
 		
-		///*
+		/*
 		// parte vii - @ManyToMany
 		
 		// instancia acess�rios
@@ -198,7 +198,7 @@ public class Programa {
 		// persiste ve�culos
 		em.persist(veiculo1);
 		em.persist(veiculo2);	
-		//*/
+		*/
 		
 		em.getTransaction().commit();
 		//*/
