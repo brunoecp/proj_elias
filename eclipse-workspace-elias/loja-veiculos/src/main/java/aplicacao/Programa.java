@@ -10,14 +10,12 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Persistence;
 
-import dominio.Acessorio;
+import dominio.*;
 //import dominio.Proprietario;
 //import dominio.ProprietarioEmbedded;
-import dominio.Proprietario;
-import dominio.TipoCombustivel;
-import dominio.Veiculo;
 
-public class Programa {
+
+ public class Programa {
 
 	public static void main(String[] args) {
 
@@ -202,6 +200,7 @@ public class Programa {
 		em.persist(veiculo2);	
 		*/
 		//parte viii - @ElementCollention
+		/*
 		Proprietario proprietario = new Proprietario();
 		proprietario.setNome("sebastião");
 		proprietario.setEmail("sebastino@fiap.com.br");
@@ -209,7 +208,14 @@ public class Programa {
 		proprietario.getTelefones().add("(11) 22222222");
 
 		em.persist(proprietario);
-		
+		*/
+
+		// parte IX - Objetos emputidos
+		Proprietario proprietario = new Proprietario();
+		proprietario.setEmail("bruninthedog@gmail.com");
+		proprietario.setNome("brunin");
+		proprietario.getTelefones().add(new Telefone("011","967472189","00002"));
+		em.persist(proprietario);
 		em.getTransaction().commit();
 		//*/
 				

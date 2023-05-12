@@ -28,10 +28,14 @@ public class Proprietario {
 	private String nome;
 //	@Column(length = 20, nullable = false)
 //	private String telefone;
+//	@ElementCollection
+//	@CollectionTable(name = "proprietario_telefone",  joinColumns = @JoinColumn(name = "proprietario_codigo"))
+//	@Column(name = "telefone_numero", length = 20, nullable = false)
+//	private List<String> telefones = new ArrayList<>();
 	@ElementCollection
 	@CollectionTable(name = "proprietario_telefone",  joinColumns = @JoinColumn(name = "proprietario_codigo"))
-	@Column(name = "telefone_numero", length = 20, nullable = false)
-	private List<String> telefones = new ArrayList<>();
+	@AttributeOverride(name = "numero", column = @Column(name = "Telefone_numero", length = 20, nullable = false))
+	private List<Telefone> telefones = new ArrayList<>();
 
 	@Column(length = 255)
 	private String email;

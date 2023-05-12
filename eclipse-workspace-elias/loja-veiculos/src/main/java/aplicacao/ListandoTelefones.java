@@ -1,13 +1,11 @@
 package aplicacao;
 
 import dominio.Proprietario;
-import dominio.Veiculo;
+import dominio.Telefone;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
-import java.util.List;
 
 public class ListandoTelefones {
 
@@ -18,11 +16,25 @@ public class ListandoTelefones {
 
 		// em.getTransaction().begin(); // h� a necessidade de se fazer uma transa��o ao inserir algo no bd
 
-		Proprietario proprietario = em.find(Proprietario.class, 2l);
+//		Proprietario proprietario = em.find(Proprietario.class, 2l);
+//
+//		System.out.println("Proprietario: " + proprietario.getNome());
+//
+//		for(String telefone : proprietario.getTelefones()){
+//			System.out.println("Telefone: "  + telefone);
+//		}
+//
+//		// em.getTransaction().commit();
+//
+//		System.out.println("pronto!");
+//		em.close(); // fechando...
+//		emf.close();
+
+		Proprietario proprietario = em.find(Proprietario.class, 1l);
 
 		System.out.println("Proprietario: " + proprietario.getNome());
 
-		for(String telefone : proprietario.getTelefones()){
+		for(Telefone telefone : proprietario.getTelefones()){
 			System.out.println("Telefone: "  + telefone);
 		}
 
@@ -32,6 +44,6 @@ public class ListandoTelefones {
 		em.close(); // fechando...
 		emf.close();
 
-	}
 
+	}
 }
