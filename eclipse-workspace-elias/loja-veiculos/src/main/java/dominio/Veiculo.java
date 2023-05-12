@@ -75,14 +75,14 @@ public class Veiculo {
 	*/
 	
 	///*
-	@ManyToMany
-	// parte ii - @JoinTable
-	@JoinTable(name = "veiculo_acessorio",
-	joinColumns = @JoinColumn(name = "veiculo_codigo"),
-	inverseJoinColumns = @JoinColumn(name = "acessorio_codigo"))
-	//*/
-	// parte i
-	private Set<Acessorio> acessorios = new HashSet<>(); // Definimos aqui um conjunto para que um ve�culo n�o tenha um acess�rio repetido
+//	@ManyToMany
+//	// parte ii - @JoinTable
+//	@JoinTable(name = "veiculo_acessorio",
+//	joinColumns = @JoinColumn(name = "veiculo_codigo"),
+//	inverseJoinColumns = @JoinColumn(name = "acessorio_codigo"))
+//	//*/
+//	// parte i
+//	private Set<Acessorio> acessorios = new HashSet<>(); // Definimos aqui um conjunto para que um ve�culo n�o tenha um acess�rio repetido
 
 	/*
 	As propriedades de uma entidade s�o automaticamente mapeadas se n�o especificarmos nenhuma anota��o.

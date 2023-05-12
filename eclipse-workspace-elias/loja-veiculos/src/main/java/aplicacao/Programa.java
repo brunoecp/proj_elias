@@ -2,6 +2,7 @@
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -12,6 +13,7 @@ import javax.persistence.Persistence;
 import dominio.Acessorio;
 //import dominio.Proprietario;
 //import dominio.ProprietarioEmbedded;
+import dominio.Proprietario;
 import dominio.TipoCombustivel;
 import dominio.Veiculo;
 
@@ -199,6 +201,14 @@ public class Programa {
 		em.persist(veiculo1);
 		em.persist(veiculo2);	
 		*/
+		//parte viii - @ElementCollention
+		Proprietario proprietario = new Proprietario();
+		proprietario.setNome("sebastião");
+		proprietario.setEmail("sebastino@fiap.com.br");
+		proprietario.getTelefones().add("(34) 11111111");
+		proprietario.getTelefones().add("(11) 22222222");
+
+		em.persist(proprietario);
 		
 		em.getTransaction().commit();
 		//*/
