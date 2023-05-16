@@ -19,7 +19,7 @@ import lombok.ToString;
 @EqualsAndHashCode
 @Entity
 @Table(name = "proprietario")
-public class Proprietario {
+public class  Proprietario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,10 +28,12 @@ public class Proprietario {
 	private String nome;
 //	@Column(length = 20, nullable = false)
 //	private String telefone;
+
 //	@ElementCollection
 //	@CollectionTable(name = "proprietario_telefone",  joinColumns = @JoinColumn(name = "proprietario_codigo"))
 //	@Column(name = "telefone_numero", length = 20, nullable = false)
 //	private List<String> telefones = new ArrayList<>();
+
 	@ElementCollection
 	@CollectionTable(name = "proprietario_telefone",  joinColumns = @JoinColumn(name = "proprietario_codigo"))
 	@AttributeOverride(name = "numero", column = @Column(name = "Telefone_numero", length = 20, nullable = false))
@@ -43,7 +45,7 @@ public class Proprietario {
 	// @OneToOne(mappedBy = "proprietario")
 	// private Veiculo veiculo;
 
-//	@OneToMany(mappedBy = "proprietario")
-//	private List<Veiculo> veiculos;
+	@OneToMany(mappedBy = "proprietario")
+	private List<Veiculo> veiculos;
 
 }

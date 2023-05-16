@@ -210,6 +210,7 @@ import dominio.*;
 		em.persist(proprietario);
 		*/
 
+		/*
 		// parte IX - Objetos emputidos
 		Proprietario proprietario = new Proprietario();
 		proprietario.setEmail("bruninthedog@gmail.com");
@@ -217,7 +218,7 @@ import dominio.*;
 		proprietario.getTelefones().add(new Telefone("011","967472189","00002"));
 		em.persist(proprietario);
 		em.getTransaction().commit();
-		//*/
+		*/
 				
 		/*
 		// parte iii - Usado data e CLOB (continua��o)

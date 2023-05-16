@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-//@Entity
+@Entity
 @Table(name = "acessorio")
 public class Acessorio {
 

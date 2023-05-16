@@ -50,13 +50,13 @@ public class Veiculo {
 	@Column(name = "data_cadastro", nullable = false)
 	private LocalDate dataCadastro;
 	
-	/*
+	///*
 	@Lob
 	private String especificacoes;
 	
 	@Lob
 	private byte[] foto;
-	*/
+	//*/
 	
 	//@Embedded
 	//private ProprietarioEmbedded proprietario;
@@ -67,28 +67,28 @@ public class Veiculo {
 	//@JoinColumn(name = "cod_proprietario")
 	private Proprietario proprietario;
 	*/
-	
-	/*
+
+	///*
 	@ManyToOne
 	@JoinColumn(name = "proprietario_codigo")
 	private Proprietario proprietario;
-	*/
+	//*/
 	
 	///*
-//	@ManyToMany
-//	// parte ii - @JoinTable
-//	@JoinTable(name = "veiculo_acessorio",
-//	joinColumns = @JoinColumn(name = "veiculo_codigo"),
-//	inverseJoinColumns = @JoinColumn(name = "acessorio_codigo"))
-//	//*/
-//	// parte i
-//	private Set<Acessorio> acessorios = new HashSet<>(); // Definimos aqui um conjunto para que um ve�culo n�o tenha um acess�rio repetido
+	@ManyToMany
+	// parte ii - @JoinTable
+	@JoinTable(name = "veiculo_acessorio",
+	joinColumns = @JoinColumn(name = "veiculo_codigo"),
+	inverseJoinColumns = @JoinColumn(name = "acessorio_codigo"))
+	//*/
+	// parte i
+	private Set<Acessorio> acessorios = new HashSet<>(); // Definimos aqui um conjunto para que um ve�culo n�o tenha um acess�rio repetido
 
 	/*
 	As propriedades de uma entidade s�o automaticamente mapeadas se n�o especificarmos nenhuma anota��o.
 	Por diversas vezes, podemos precisar criar atributos que n�o representam uma coluna no banco de dados. Nestes casos, devemos anotar com @Transient.
 	A propriedade ser� ignorada totalmente pelo mecanismo de persist�ncia.
 	*/
-	//@Transient
-	//private String descricaoCompleta;
+	@Transient
+	private String descricaoCompleta;
 }
